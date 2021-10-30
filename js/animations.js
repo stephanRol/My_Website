@@ -1,3 +1,4 @@
+//Selectors
 const header = document.querySelector("header");
 const navbar = document.querySelector("nav");
 const about = document.querySelector(".about");

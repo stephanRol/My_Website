@@ -1447,7 +1447,7 @@ body footer .contact .contact-container .contact-data .copyright a:hover {
 select {
   width: 130px;
   padding-top: 1.3rem;
-  background: url("../assets/united-kingdom.png") no-repeat scroll 75px 2px;
+  background: url("../assets/EN.png") no-repeat scroll 75px 2px;
 }
 
 @-webkit-keyframes scroll-reveal {
