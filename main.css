@@ -30,6 +30,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 
 body {
@@ -1421,8 +1423,13 @@ body footer .contact .contact-container .contact-data .copyright {
   font-size: 1.3rem;
 }
 
-body footer .contact .contact-container .contact-data .copyright span {
+body footer .contact .contact-container .contact-data .copyright .copyright-letter {
   font-size: 1.3rem;
+}
+
+body footer .contact .contact-container .contact-data .copyright #author {
+  font-size: 1.3rem;
+  font-family: "ailerons";
 }
 
 body footer .contact .contact-container .contact-data .copyright a {

@@ -16,6 +16,25 @@ let languages = {
       title: "About me",
       text: "Lorem ipsum dolor sit, amet English adipisicing elit. Nisi nihil necessitatibus perspiciatis dolorem quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.Quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.",
     },
+    skills: {
+      title: "Skills",
+    },
+    works: {
+      title: "Works",
+      text: "See Code:",
+    },
+    webpageAge: {
+      title: "Webpage Age",
+      years: "Years",
+      days: "Days",
+      hours: "Hours",
+      minutes: "Minutes",
+      seconds: "Seconds",
+    },
+    contact: {
+      title: "Contact",
+      text: "2021 MyWebpage Created by  ",
+    },
   },
   DE: {
     navbar: {
@@ -33,12 +52,31 @@ let languages = {
       title: "Ueber Mich",
       text: "Lorem ipsum dolor sit, amet Deutsch adipisicing elit. Nisi nihil necessitatibus perspiciatis dolorem quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.Quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.",
     },
+    skills: {
+      title: "Kenntnisse",
+    },
+    works: {
+      title: "Projekte",
+      text: "Siehe Code:",
+    },
+    webpageAge: {
+      title: "Webpage Alter",
+      years: "Jahre",
+      days: "Tage",
+      hours: "Stunde",
+      minutes: "Minuten",
+      seconds: "Sekunden",
+    },
+    contact: {
+      title: "Kontakt",
+      text: "2021 MyWebpage Erstellt von  ",
+    },
   },
   ES: {
     navbar: {
       home: "Inicio",
       about: "Sobre mí",
-      skills: "Habilidades",
+      skills: "Conocimientos",
       works: "Proyectos",
       contact: "Contacto",
     },
@@ -50,9 +88,29 @@ let languages = {
       title: "Sobre mí",
       text: "Lorem ipsum dolor sit, amet Espanol adipisicing elit. Nisi nihil necessitatibus perspiciatis dolorem quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.Quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.",
     },
+    skills: {
+      title: "Conocimientos",
+    },
+    works: {
+      title: "Proyectos",
+      text: "Ver código:",
+    },
+    webpageAge: {
+      title: "Edad de la Webpage",
+      years: "Años",
+      days: "Días",
+      hours: "Horas",
+      minutes: "Minutos",
+      seconds: "Segundos",
+    },
+    contact: {
+      title: "Contacto",
+      text: "2021 MyWebpage Creada por  ",
+    },
   },
 };
 
+//Select Input
 let languageSelector = document.querySelector("#language-selector");
 
 //Navbar
@@ -67,6 +125,21 @@ let titleBig = document.querySelector(".paragraph-welcome");
 //About
 let titleAbout = document.querySelector(".description h2");
 let textAbout = document.querySelector(".description p");
+//Skills
+let titleSkills = document.querySelector(".skills-container h2");
+//Works
+let titleWorks = document.querySelector(".work-container h2");
+let textWorks = document.querySelectorAll(".seeCode");
+//Webpage Age
+let titleWebpageAge = document.querySelector(".webpage-age-container h2");
+let yearsWebpageAge = document.querySelector(".textYears");
+let daysWebpageAge = document.querySelector(".textDays");
+let hoursWebpageAge = document.querySelector(".textHours");
+let minutesWebpageAge = document.querySelector(".textMinutes");
+let secondsWebpageAge = document.querySelector(".textSeconds");
+//Contact
+let titleContact = document.querySelector(".contact-container h2");
+let textContact = document.querySelector("#author");
 
 //FUNCTION
 const chooseLanguage = () => {
@@ -95,6 +168,27 @@ const chooseLanguage = () => {
   //Changing texts from About
   titleAbout.innerHTML = LAN.about.title;
   textAbout.innerHTML = LAN.about.text;
+
+  //Changing texts from Skills
+  titleSkills.innerHTML = LAN.skills.title;
+
+  //Changing texts from Works
+  titleWorks.innerHTML = LAN.works.title;
+  textWorks.forEach((element) => {
+    element.innerHTML = LAN.works.text;
+  });
+
+  //Changing texts from Webpage Age
+  titleWebpageAge.innerHTML = LAN.webpageAge.title;
+  yearsWebpageAge.innerHTML = LAN.webpageAge.years;
+  daysWebpageAge.innerHTML = LAN.webpageAge.days;
+  hoursWebpageAge.innerHTML = LAN.webpageAge.hours;
+  minutesWebpageAge.innerHTML = LAN.webpageAge.minutes;
+  secondsWebpageAge.innerHTML = LAN.webpageAge.seconds;
+
+  //Changing texts from Contact
+  titleContact.innerHTML = LAN.contact.title;
+  textContact.innerHTML = LAN.contact.text;
 };
 
 //EVENT

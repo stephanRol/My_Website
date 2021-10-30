@@ -11,7 +11,7 @@ $gray-letters: #a5a5a5;
 
 html{
     scroll-behavior: smooth;
-    // filter: brightness(130%);
+    filter: brightness(120%);
 }
 
 body{
@@ -446,8 +446,12 @@ body{
                         text-align: center;
                         margin-top: 3rem;
                         font-size: 1.3rem;
-                        span{
+                        .copyright-letter{
                             font-size: 1.3rem;
+                        }
+                        #author{
+                            font-size: 1.3rem;
+                            font-family: "ailerons";
                         }
                         a{  
                             font-family: "hillonest";
