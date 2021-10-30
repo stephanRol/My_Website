@@ -1,0 +1,14 @@
+//MAIN SASS
+@import './sass/fonts';
+@import './sass/colors';
+@import './sass/styles';
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
