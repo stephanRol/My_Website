@@ -19,11 +19,11 @@ body{
     grid-template-columns: 100vw;
     grid-template-rows: 100vh auto 30vh;
     background-color: #1a1a1a;
-    overflow-x: hidden; 
     margin: 0;       
     padding: 0;
     font-family: "ailerons";
     z-index: -20;
+    overflow-x: hidden;
 
     header{
         img{
@@ -60,7 +60,7 @@ body{
                 height: 10vh;
                 width: 100%;
                 padding: 0 3.5rem;
-                font-size: 1.5rem;
+                font-size: clamp(0.9rem, calc(0.9rem + 1vw), 1.5rem);
                 background-color: transparent;
                 color: gray;
                 z-index: 100;
@@ -76,12 +76,34 @@ body{
                     }
                     100%{
                     }
-                } 
-                
-                .logo{
-
                 }
-                
+                @media screen and (max-width: 30em) {
+                    padding: 0 1rem;
+                } 
+                .hamburger{
+                    display: none;
+                    @media screen and (max-width: 48em) {
+                        margin-top: 0.3rem;
+                        display: inline;
+                    } 
+                }
+                .logo{
+                    .logo-container{
+                        display: flex;
+                        i{
+                            margin-top: 0.3rem;
+                        }
+                        p{
+                            margin-left: 0.5rem;
+                            @media screen and (max-width: 55em) {
+                                display: none;
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 48em) {
+                        display: none;
+                    }
+                }
                 .right-side{
                     display: flex;
                     align-items: center;
@@ -89,6 +111,9 @@ body{
                         display: flex;
                         list-style: none;
                         margin: 0 2rem;
+                        @media screen and (max-width: 48em) {
+                            display: none;
+                        } 
                         li{
                             margin: 0 1rem;
                             cursor: pointer;
@@ -123,6 +148,10 @@ body{
                     clip-path: polygon(0 0, 95% 0, 75% 100%, 0 100%);
                     background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(8, 8, 8, 0.945));
                     animation: polygonEffect 4.5s forwards;
+                    @media screen and (max-width: 30em) {
+                        padding: 5rem 1rem;
+                    }
+
 
                     @keyframes polygonEffect{
                         0%{
@@ -138,15 +167,56 @@ body{
                         clip-path: polygon(0 0, 95% 0, 75% 100%, 0 100%);
                         }
                     }
+                    @media screen and (max-width: 90em) {
+                        @keyframes polygonEffect{
+                            0%{
+                                width: 100%;
+                                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                            }
+                            100%{
+                                width: 100%;
+                                clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%);
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 48em) {
+                        @keyframes polygonEffect{
+                            0%{
+                                width: 100%;
+                                clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+                            }
+                            100%{
+                                width: 100%;
+                                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                            }
+                        }
+                    } 
+                    
 
                     .title{
                         margin-top: 8rem;
                         margin-right: 6rem;
                         line-height: 4.5rem;
+                        @media screen and (max-width: 90em) {
+                            align-self: flex-start;
+                        }  
+                        @media screen and (max-height: 50em) {
+                            margin-top: 2.5rem;
+                        }  
+                        @media screen and (max-width: 48em) {
+                            align-self: center;  
+                            margin-right: 0;
+                        }  
+                        // @media screen and (max-width: 30em) {
+                        //     line-height: 3rem;
+                        // }  
                         p{
                             color: #e7e7e7;
-                            font-size: 3.2rem;
-                            font-family: "codesaver";
+                            font-size: clamp(0.5rem, calc(0.5rem + 2vw), 3.2rem);
+                            font-family: "codesaver"; 
+                            // @media screen and (max-width: 30em) {
+                            //     font-size: 1.2rem;
+                            // } 
                         }
                         .title-1-open,
                         .title-1,
@@ -165,9 +235,11 @@ body{
                 top: 60%;
                 width: 100%;
                 text-align: center;
+                padding: 0 1rem;
                 z-index: 20;
                 font-family: "ailerons";
                 font-size: 12rem;
+                font-size: clamp(2rem, calc(2rem + 8vw), 12rem);
                 color: #80862d88;
                 animation: welcomeEffect 6s forwards;
                 @keyframes welcomeEffect{
@@ -186,7 +258,7 @@ body{
                     100%{
                     width: 100%;
                     }
-                }    
+                }  
             }
         }
     }
@@ -196,11 +268,18 @@ body{
 
         .about{
             width: 100%;
-            height: 90vh;
+            padding: 5rem 0 7rem 0;            
             display: grid;
             justify-content: center;
             grid-template-columns: 30% 30%;
             background-color: rgb(5, 5, 5);
+
+            @media screen and (max-width: 87.5em) {
+                grid-template-columns: 50% 50%;
+            }
+            @media screen and (max-width: 48em) {
+                grid-template-columns: 100%;
+            }
 
             .image{
                 display: flex;
@@ -209,8 +288,10 @@ body{
                 opacity: 0;
 
                 img{
-                    width: 60%;
-                    height: 58%;
+                    // width: 60%;
+                    width: 300px;
+                    // height: 58%;
+                    height: 490px;
                     border-radius: 5px;
                     opacity: 0.8;
                     box-shadow: 20px 20px rgba(128, 134, 45, 0.473), 40px 40px #80862d56;
@@ -222,13 +303,25 @@ body{
                 justify-content: center;
                 color: $gray-letters;
                 opacity: 0;
+                @media screen and (max-width: 48em) {
+                    align-items: center;
+                    margin-top: 3rem;
+                }
                 h2{  
                     width: 70%;
                     font-size: 4rem;
+                    @media screen and (max-width: 48em) {
+                        width: 70%;
+                        text-align: center;
+                    }
                 }
                 p{
                     width: 80%;
-                    font-size: 1.4rem;
+                    font-size: clamp(1rem, calc(0.5rem + 1vw), 1.5rem);
+                    @media screen and (max-width: 48em) {
+                        width: 70%;
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -239,7 +332,7 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            width: 100vw;
             background: linear-gradient(to left bottom, #060505ee, #090809ee, #0c0b0cee, #0e0e10ee, #101112f6, #141515ee, #181818f6, #1b1b1bf6, #212121f6, #262626f6, #2c2c2cf6, #323232f6), url("../assets/skills-bg.jpg");
             background-repeat: no-repeat;
             background-size: cover;
@@ -247,9 +340,12 @@ body{
 
             .skills-container, .work-container, .webpage-age-container, .contact-container{
                 width: 80%;
-                height: 85%;
                 color: $gray-letters;
                 opacity: 0;
+
+                @media screen and (max-width: 64em){
+                    width: 100%;
+                }
                 h2{
                     width: 100%;
                     text-align: center;
@@ -263,13 +359,17 @@ body{
                     width: 100%;
                     display: grid;
                     grid-template-columns: repeat(3, 33%);
-                    grid-template-columns: repeat(3, 25%);
-                    row-gap: 2.5rem;
+                    row-gap: 5rem;
                     justify-items: center;
                     justify-content: center;
+                    padding-bottom: 6rem;
+
+                    @media screen and (max-width: 30em){
+                        grid-template-columns: repeat(2, 50%);
+                    }
                     .logo, .work-photo{
-                        width: 30%;
-                        height: 75%;
+                        width: 110px;
+                        height: 110px;
                         transform: translateY(0px);
 
                         img{
@@ -298,19 +398,6 @@ body{
 
                         }
                     }
-                    .logo:nth-child(1),
-                    .logo:nth-child(4){
-                        img{
-                            width: 107%;
-                            height: 96%;
-                        }
-                    }
-                    .logo:nth-child(3){
-                        img{
-                            width: 105%;
-                            height: 100%;
-                        }
-                    }
                 }
             }
         }
@@ -320,10 +407,17 @@ body{
             }
         }
         .work{
-            height: 80vh;
             background-image: linear-gradient(to left bottom, #c8c8c8, #acacac, #909090, #767676, #5c5c5c);
+            padding-bottom: 3rem;
+            @media screen and (max-width: 75em) {
+                padding-bottom: 0;
+            }
             .work-container{
                 margin-top: 1rem;
+                margin-bottom: 6rem;
+                @media screen and (max-width: 75em) {
+                    margin-bottom: 0;
+                }
                 h2{
                     color:#232025;
                     width: 100%;
@@ -336,12 +430,28 @@ body{
                 }
                 .works{
                     column-gap: 3rem;
+                    @media screen and (max-width: 75em) {
+                        grid-template-columns: 100%;
+                    }
                     .work-photo{
-                        width: 95%;
-                        height: 60%;
+                        width: 18vw;
+                        min-width: 300px;
+                        height: 11vw;
+                        min-height: 158px;
                         cursor: pointer;
+
+                        @media screen and (max-width: 75em) {
+                            width: auto;
+                            height: auto;
+                        }
                         img{
                             margin-bottom: 1rem;
+                            @media screen and (max-width: 75em) {
+                                min-width: 300px;
+                                width: 50vw;
+                                min-height: 170px;
+                                height: 35vw;
+                            }
                             &:hover{
                                 transform: scale(1.1);
                             }
@@ -372,13 +482,16 @@ body{
         }
         .webpage-age{
             background-image: linear-gradient(to left top, #0d0d0d, #171717, #1f1f1f, #272727, #303030);
-            height: 60vh;
+            min-height: 60vh;
             .webpage-age-container{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
                 height: auto;
+                @media screen and (max-width: 37.4em) {
+                    margin-top: 3rem;
+                }
                 .underline{
                     margin: 1rem 0 0 0;
                 }
@@ -386,8 +499,15 @@ body{
                     display: grid;
                     grid-template-columns: repeat(5, 1fr);
                     gap: 1rem;
-                    height:30vh;
                     width: 60%;
+                    margin-top: 2rem;
+                    margin-bottom: 5rem;
+                    @media screen and (max-width: 64em) {
+                        width: 90%;
+                    }
+                    @media screen and (max-width: 37.4em) {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
                     .number{
                         display: flex;
                         justify-content: center;
@@ -403,6 +523,7 @@ body{
                         width: 100%;
                         text-align: center;
                         font-size: 1.5rem;
+                        margin-top: 1rem;
                     }
 
                 }
@@ -414,19 +535,17 @@ body{
     
     footer{
         .contact{
-            height: 47vh;
+            min-height: 45vh;
             .contact-container{
                 .contact-data{
-                    position: relative;
-                    top: -40px;
                     span{
                         font-family: Tahoma;
-                        font-size: 2.8rem;
+                        font-size: clamp(0.8rem, calc(0.8rem + 2vw), 2.8rem);
                     }
                     h2{
-                        margin: 1.5rem;
-                        margin-top: 5.5rem;
-                        font-size: 2.8rem;
+                        margin-top: 1.5rem;
+                        margin-bottom: 1.5rem;
+                        font-size: clamp(1.8rem, calc(0.8rem + 2vw), 2.8rem);
                     }
                     .links{
                         width: 100%;
@@ -434,23 +553,30 @@ body{
                         margin:0.5rem 0;
                         a{
                             margin: 0 3rem;
-                            font-size: 3rem;
+                            font-size: clamp(2rem, calc(0.8rem + 2vw), 3rem);
                             color: $gray-letters;
                             &:hover{
                                 filter: brightness(300%);
+                            }
+                            @media screen and (max-width: 30em) {
+                                margin: 0 1rem;    
                             }
                         }
                     }
                     .copyright{
                         width: 100%;
                         text-align: center;
-                        margin-top: 3rem;
-                        font-size: 1.3rem;
+                        margin-top: 2.5rem;
+                        margin-bottom: 2rem;
+                        font-size: clamp(1rem, calc(0.5rem + 1vw), 1.3rem);
+                        padding: 0 3rem; 
+
                         .copyright-letter{
-                            font-size: 1.3rem;
+                            font-size: clamp(1rem, calc(0.5rem + 1vw), 1.3rem);
+
                         }
                         #author{
-                            font-size: 1.3rem;
+                            font-size: clamp(1rem, calc(0.5rem + 1vw), 1.3rem);
                             font-family: "ailerons";
                         }
                         a{  
@@ -467,7 +593,17 @@ body{
                                 transition: 0.3s;
                             }
                         }
+                        #autograph{
+                            @media screen and (max-width: 30em) {
+                                display: block;
+                                margin-top: 3rem;
+                                margin-bottom: 2rem;
+                            }
+                        }
                     }
+                }
+                .underline{
+                    margin-bottom: 2rem;
                 }
             }
         }
@@ -490,9 +626,16 @@ select{
 //Common breakpoints for widths of devices:
 
 // 320px — 480px: Mobile devices
-// 481px — 768px: iPads, Tablets
+// 481px — 768px: iPads, Tablets  (48em)
 // 769px — 1024px: Small screens, laptops
 // 1025px — 1200px: Desktops, large screens
 // 1201px and more —  Extra large screens, TV
+
+//320px = 20em
+//480px = 30em
+//600px = 37.5em
+//768px = 48em
+//1024px = 64em
+//1200px = 75em
 
 

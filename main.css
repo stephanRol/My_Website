@@ -42,11 +42,11 @@ body {
   -ms-grid-rows: 100vh auto 30vh;
       grid-template-rows: 100vh auto 30vh;
   background-color: #1a1a1a;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: "ailerons";
   z-index: -20;
+  overflow-x: hidden;
 }
 
 body header img {
@@ -108,7 +108,7 @@ body header .home nav {
   height: 10vh;
   width: 100%;
   padding: 0 3.5rem;
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem, calc(0.9rem + 1vw), 1.5rem);
   background-color: transparent;
   color: gray;
   z-index: 100;
@@ -140,6 +140,49 @@ body header .home nav {
   }
 }
 
+@media screen and (max-width: 30em) {
+  body header .home nav {
+    padding: 0 1rem;
+  }
+}
+
+body header .home nav .hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 48em) {
+  body header .home nav .hamburger {
+    margin-top: 0.3rem;
+    display: inline;
+  }
+}
+
+body header .home nav .logo .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header .home nav .logo .logo-container i {
+  margin-top: 0.3rem;
+}
+
+body header .home nav .logo .logo-container p {
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 55em) {
+  body header .home nav .logo .logo-container p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  body header .home nav .logo {
+    display: none;
+  }
+}
+
 body header .home nav .right-side {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,6 +198,12 @@ body header .home nav .right-side ul {
   display: flex;
   list-style: none;
   margin: 0 2rem;
+}
+
+@media screen and (max-width: 48em) {
+  body header .home nav .right-side ul {
+    display: none;
+  }
 }
 
 body header .home nav .right-side ul li {
@@ -205,6 +254,12 @@ body header .home .content .left-side {
           animation: polygonEffect 4.5s forwards;
 }
 
+@media screen and (max-width: 30em) {
+  body header .home .content .left-side {
+    padding: 5rem 1rem;
+  }
+}
+
 @-webkit-keyframes polygonEffect {
   0% {
     width: 100%;
@@ -241,15 +296,91 @@ body header .home .content .left-side {
   }
 }
 
+@media screen and (max-width: 90em) {
+  @-webkit-keyframes polygonEffect {
+    0% {
+      width: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    100% {
+      width: 100%;
+      -webkit-clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%);
+              clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%);
+    }
+  }
+  @keyframes polygonEffect {
+    0% {
+      width: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    100% {
+      width: 100%;
+      -webkit-clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%);
+              clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%);
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  @-webkit-keyframes polygonEffect {
+    0% {
+      width: 100%;
+      -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+              clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    }
+    100% {
+      width: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  @keyframes polygonEffect {
+    0% {
+      width: 100%;
+      -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+              clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    }
+    100% {
+      width: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+}
+
 body header .home .content .left-side .title {
   margin-top: 8rem;
   margin-right: 6rem;
   line-height: 4.5rem;
 }
 
+@media screen and (max-width: 90em) {
+  body header .home .content .left-side .title {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+@media screen and (max-height: 50em) {
+  body header .home .content .left-side .title {
+    margin-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  body header .home .content .left-side .title {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 0;
+  }
+}
+
 body header .home .content .left-side .title p {
   color: #e7e7e7;
-  font-size: 3.2rem;
+  font-size: clamp(0.5rem, calc(0.5rem + 2vw), 3.2rem);
   font-family: "codesaver";
 }
 
@@ -267,9 +398,11 @@ body header .home .paragraph-welcome {
   top: 60%;
   width: 100%;
   text-align: center;
+  padding: 0 1rem;
   z-index: 20;
   font-family: "ailerons";
   font-size: 12rem;
+  font-size: clamp(2rem, calc(2rem + 8vw), 12rem);
   color: #80862d88;
   -webkit-animation: welcomeEffect 6s forwards;
           animation: welcomeEffect 6s forwards;
@@ -317,7 +450,7 @@ body main, body footer {
 
 body main .about, body footer .about {
   width: 100%;
-  height: 90vh;
+  padding: 5rem 0 7rem 0;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -326,6 +459,20 @@ body main .about, body footer .about {
   -ms-grid-columns: 30% 30%;
       grid-template-columns: 30% 30%;
   background-color: #050505;
+}
+
+@media screen and (max-width: 87.5em) {
+  body main .about, body footer .about {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  body main .about, body footer .about {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
 }
 
 body main .about .image, body footer .about .image {
@@ -342,8 +489,8 @@ body main .about .image, body footer .about .image {
 }
 
 body main .about .image img, body footer .about .image img {
-  width: 60%;
-  height: 58%;
+  width: 300px;
+  height: 490px;
   border-radius: 5px;
   opacity: 0.8;
   -webkit-box-shadow: 20px 20px rgba(128, 134, 45, 0.473), 40px 40px #80862d56;
@@ -365,14 +512,37 @@ body main .about .description, body footer .about .description {
   opacity: 0;
 }
 
+@media screen and (max-width: 48em) {
+  body main .about .description, body footer .about .description {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 3rem;
+  }
+}
+
 body main .about .description h2, body footer .about .description h2 {
   width: 70%;
   font-size: 4rem;
 }
 
+@media screen and (max-width: 48em) {
+  body main .about .description h2, body footer .about .description h2 {
+    width: 70%;
+    text-align: center;
+  }
+}
+
 body main .about .description p, body footer .about .description p {
   width: 80%;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, calc(0.5rem + 1vw), 1.5rem);
+}
+
+@media screen and (max-width: 48em) {
+  body main .about .description p, body footer .about .description p {
+    width: 70%;
+    text-align: center;
+  }
 }
 
 body main .skills,
@@ -391,7 +561,7 @@ body footer .contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  width: 100vw;
   background: -webkit-gradient(linear, right top, left bottom, from(#060505ee), color-stop(#090809ee), color-stop(#0c0b0cee), color-stop(#0e0e10ee), color-stop(#101112f6), color-stop(#141515ee), color-stop(#181818f6), color-stop(#1b1b1bf6), color-stop(#212121f6), color-stop(#262626f6), color-stop(#2c2c2cf6), to(#323232f6)), url("../assets/skills-bg.jpg");
   background: linear-gradient(to left bottom, #060505ee, #090809ee, #0c0b0cee, #0e0e10ee, #101112f6, #141515ee, #181818f6, #1b1b1bf6, #212121f6, #262626f6, #2c2c2cf6, #323232f6), url("../assets/skills-bg.jpg");
   background-repeat: no-repeat;
@@ -425,9 +595,38 @@ body footer .contact .work-container,
 body footer .contact .webpage-age-container,
 body footer .contact .contact-container {
   width: 80%;
-  height: 85%;
   color: #a5a5a5;
   opacity: 0;
+}
+
+@media screen and (max-width: 64em) {
+  body main .skills .skills-container, body main .skills .work-container, body main .skills .webpage-age-container, body main .skills .contact-container,
+  body main .work .skills-container,
+  body main .work .work-container,
+  body main .work .webpage-age-container,
+  body main .work .contact-container,
+  body main .webpage-age .skills-container,
+  body main .webpage-age .work-container,
+  body main .webpage-age .webpage-age-container,
+  body main .webpage-age .contact-container,
+  body main .contact .skills-container,
+  body main .contact .work-container,
+  body main .contact .webpage-age-container,
+  body main .contact .contact-container, body footer .skills .skills-container, body footer .skills .work-container, body footer .skills .webpage-age-container, body footer .skills .contact-container,
+  body footer .work .skills-container,
+  body footer .work .work-container,
+  body footer .work .webpage-age-container,
+  body footer .work .contact-container,
+  body footer .webpage-age .skills-container,
+  body footer .webpage-age .work-container,
+  body footer .webpage-age .webpage-age-container,
+  body footer .webpage-age .contact-container,
+  body footer .contact .skills-container,
+  body footer .contact .work-container,
+  body footer .contact .webpage-age-container,
+  body footer .contact .contact-container {
+    width: 100%;
+  }
 }
 
 body main .skills .skills-container h2, body main .skills .work-container h2, body main .skills .webpage-age-container h2, body main .skills .contact-container h2,
@@ -543,13 +742,67 @@ body footer .contact .contact-container .works {
   display: grid;
   -ms-grid-columns: (33%)[3];
       grid-template-columns: repeat(3, 33%);
-  -ms-grid-columns: (25%)[3];
-      grid-template-columns: repeat(3, 25%);
-  row-gap: 2.5rem;
+  row-gap: 5rem;
   justify-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 6rem;
+}
+
+@media screen and (max-width: 30em) {
+  body main .skills .skills-container .logos, body main .skills .skills-container .works, body main .skills .work-container .logos, body main .skills .work-container .works, body main .skills .webpage-age-container .logos, body main .skills .webpage-age-container .works, body main .skills .contact-container .logos, body main .skills .contact-container .works,
+  body main .work .skills-container .logos,
+  body main .work .skills-container .works,
+  body main .work .work-container .logos,
+  body main .work .work-container .works,
+  body main .work .webpage-age-container .logos,
+  body main .work .webpage-age-container .works,
+  body main .work .contact-container .logos,
+  body main .work .contact-container .works,
+  body main .webpage-age .skills-container .logos,
+  body main .webpage-age .skills-container .works,
+  body main .webpage-age .work-container .logos,
+  body main .webpage-age .work-container .works,
+  body main .webpage-age .webpage-age-container .logos,
+  body main .webpage-age .webpage-age-container .works,
+  body main .webpage-age .contact-container .logos,
+  body main .webpage-age .contact-container .works,
+  body main .contact .skills-container .logos,
+  body main .contact .skills-container .works,
+  body main .contact .work-container .logos,
+  body main .contact .work-container .works,
+  body main .contact .webpage-age-container .logos,
+  body main .contact .webpage-age-container .works,
+  body main .contact .contact-container .logos,
+  body main .contact .contact-container .works, body footer .skills .skills-container .logos, body footer .skills .skills-container .works, body footer .skills .work-container .logos, body footer .skills .work-container .works, body footer .skills .webpage-age-container .logos, body footer .skills .webpage-age-container .works, body footer .skills .contact-container .logos, body footer .skills .contact-container .works,
+  body footer .work .skills-container .logos,
+  body footer .work .skills-container .works,
+  body footer .work .work-container .logos,
+  body footer .work .work-container .works,
+  body footer .work .webpage-age-container .logos,
+  body footer .work .webpage-age-container .works,
+  body footer .work .contact-container .logos,
+  body footer .work .contact-container .works,
+  body footer .webpage-age .skills-container .logos,
+  body footer .webpage-age .skills-container .works,
+  body footer .webpage-age .work-container .logos,
+  body footer .webpage-age .work-container .works,
+  body footer .webpage-age .webpage-age-container .logos,
+  body footer .webpage-age .webpage-age-container .works,
+  body footer .webpage-age .contact-container .logos,
+  body footer .webpage-age .contact-container .works,
+  body footer .contact .skills-container .logos,
+  body footer .contact .skills-container .works,
+  body footer .contact .work-container .logos,
+  body footer .contact .work-container .works,
+  body footer .contact .webpage-age-container .logos,
+  body footer .contact .webpage-age-container .works,
+  body footer .contact .contact-container .logos,
+  body footer .contact .contact-container .works {
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+  }
 }
 
 body main .skills .skills-container .logos .logo, body main .skills .skills-container .logos .work-photo, body main .skills .skills-container .works .logo, body main .skills .skills-container .works .work-photo, body main .skills .work-container .logos .logo, body main .skills .work-container .logos .work-photo, body main .skills .work-container .works .logo, body main .skills .work-container .works .work-photo, body main .skills .webpage-age-container .logos .logo, body main .skills .webpage-age-container .logos .work-photo, body main .skills .webpage-age-container .works .logo, body main .skills .webpage-age-container .works .work-photo, body main .skills .contact-container .logos .logo, body main .skills .contact-container .logos .work-photo, body main .skills .contact-container .works .logo, body main .skills .contact-container .works .work-photo,
@@ -649,8 +902,8 @@ body footer .contact .contact-container .logos .logo,
 body footer .contact .contact-container .logos .work-photo,
 body footer .contact .contact-container .works .logo,
 body footer .contact .contact-container .works .work-photo {
-  width: 30%;
-  height: 75%;
+  width: 110px;
+  height: 110px;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
@@ -1075,188 +1328,31 @@ body footer .contact .contact-container .works .work-photo:hover .language-name 
           transform: scale(1.3) translateY(10px);
 }
 
-body main .skills .skills-container .logos .logo:nth-child(1) img,
-body main .skills .skills-container .logos .logo:nth-child(4) img, body main .skills .skills-container .works .logo:nth-child(1) img,
-body main .skills .skills-container .works .logo:nth-child(4) img, body main .skills .work-container .logos .logo:nth-child(1) img,
-body main .skills .work-container .logos .logo:nth-child(4) img, body main .skills .work-container .works .logo:nth-child(1) img,
-body main .skills .work-container .works .logo:nth-child(4) img, body main .skills .webpage-age-container .logos .logo:nth-child(1) img,
-body main .skills .webpage-age-container .logos .logo:nth-child(4) img, body main .skills .webpage-age-container .works .logo:nth-child(1) img,
-body main .skills .webpage-age-container .works .logo:nth-child(4) img, body main .skills .contact-container .logos .logo:nth-child(1) img,
-body main .skills .contact-container .logos .logo:nth-child(4) img, body main .skills .contact-container .works .logo:nth-child(1) img,
-body main .skills .contact-container .works .logo:nth-child(4) img,
-body main .work .skills-container .logos .logo:nth-child(1) img,
-body main .work .skills-container .logos .logo:nth-child(4) img,
-body main .work .skills-container .works .logo:nth-child(1) img,
-body main .work .skills-container .works .logo:nth-child(4) img,
-body main .work .work-container .logos .logo:nth-child(1) img,
-body main .work .work-container .logos .logo:nth-child(4) img,
-body main .work .work-container .works .logo:nth-child(1) img,
-body main .work .work-container .works .logo:nth-child(4) img,
-body main .work .webpage-age-container .logos .logo:nth-child(1) img,
-body main .work .webpage-age-container .logos .logo:nth-child(4) img,
-body main .work .webpage-age-container .works .logo:nth-child(1) img,
-body main .work .webpage-age-container .works .logo:nth-child(4) img,
-body main .work .contact-container .logos .logo:nth-child(1) img,
-body main .work .contact-container .logos .logo:nth-child(4) img,
-body main .work .contact-container .works .logo:nth-child(1) img,
-body main .work .contact-container .works .logo:nth-child(4) img,
-body main .webpage-age .skills-container .logos .logo:nth-child(1) img,
-body main .webpage-age .skills-container .logos .logo:nth-child(4) img,
-body main .webpage-age .skills-container .works .logo:nth-child(1) img,
-body main .webpage-age .skills-container .works .logo:nth-child(4) img,
-body main .webpage-age .work-container .logos .logo:nth-child(1) img,
-body main .webpage-age .work-container .logos .logo:nth-child(4) img,
-body main .webpage-age .work-container .works .logo:nth-child(1) img,
-body main .webpage-age .work-container .works .logo:nth-child(4) img,
-body main .webpage-age .webpage-age-container .logos .logo:nth-child(1) img,
-body main .webpage-age .webpage-age-container .logos .logo:nth-child(4) img,
-body main .webpage-age .webpage-age-container .works .logo:nth-child(1) img,
-body main .webpage-age .webpage-age-container .works .logo:nth-child(4) img,
-body main .webpage-age .contact-container .logos .logo:nth-child(1) img,
-body main .webpage-age .contact-container .logos .logo:nth-child(4) img,
-body main .webpage-age .contact-container .works .logo:nth-child(1) img,
-body main .webpage-age .contact-container .works .logo:nth-child(4) img,
-body main .contact .skills-container .logos .logo:nth-child(1) img,
-body main .contact .skills-container .logos .logo:nth-child(4) img,
-body main .contact .skills-container .works .logo:nth-child(1) img,
-body main .contact .skills-container .works .logo:nth-child(4) img,
-body main .contact .work-container .logos .logo:nth-child(1) img,
-body main .contact .work-container .logos .logo:nth-child(4) img,
-body main .contact .work-container .works .logo:nth-child(1) img,
-body main .contact .work-container .works .logo:nth-child(4) img,
-body main .contact .webpage-age-container .logos .logo:nth-child(1) img,
-body main .contact .webpage-age-container .logos .logo:nth-child(4) img,
-body main .contact .webpage-age-container .works .logo:nth-child(1) img,
-body main .contact .webpage-age-container .works .logo:nth-child(4) img,
-body main .contact .contact-container .logos .logo:nth-child(1) img,
-body main .contact .contact-container .logos .logo:nth-child(4) img,
-body main .contact .contact-container .works .logo:nth-child(1) img,
-body main .contact .contact-container .works .logo:nth-child(4) img, body footer .skills .skills-container .logos .logo:nth-child(1) img,
-body footer .skills .skills-container .logos .logo:nth-child(4) img, body footer .skills .skills-container .works .logo:nth-child(1) img,
-body footer .skills .skills-container .works .logo:nth-child(4) img, body footer .skills .work-container .logos .logo:nth-child(1) img,
-body footer .skills .work-container .logos .logo:nth-child(4) img, body footer .skills .work-container .works .logo:nth-child(1) img,
-body footer .skills .work-container .works .logo:nth-child(4) img, body footer .skills .webpage-age-container .logos .logo:nth-child(1) img,
-body footer .skills .webpage-age-container .logos .logo:nth-child(4) img, body footer .skills .webpage-age-container .works .logo:nth-child(1) img,
-body footer .skills .webpage-age-container .works .logo:nth-child(4) img, body footer .skills .contact-container .logos .logo:nth-child(1) img,
-body footer .skills .contact-container .logos .logo:nth-child(4) img, body footer .skills .contact-container .works .logo:nth-child(1) img,
-body footer .skills .contact-container .works .logo:nth-child(4) img,
-body footer .work .skills-container .logos .logo:nth-child(1) img,
-body footer .work .skills-container .logos .logo:nth-child(4) img,
-body footer .work .skills-container .works .logo:nth-child(1) img,
-body footer .work .skills-container .works .logo:nth-child(4) img,
-body footer .work .work-container .logos .logo:nth-child(1) img,
-body footer .work .work-container .logos .logo:nth-child(4) img,
-body footer .work .work-container .works .logo:nth-child(1) img,
-body footer .work .work-container .works .logo:nth-child(4) img,
-body footer .work .webpage-age-container .logos .logo:nth-child(1) img,
-body footer .work .webpage-age-container .logos .logo:nth-child(4) img,
-body footer .work .webpage-age-container .works .logo:nth-child(1) img,
-body footer .work .webpage-age-container .works .logo:nth-child(4) img,
-body footer .work .contact-container .logos .logo:nth-child(1) img,
-body footer .work .contact-container .logos .logo:nth-child(4) img,
-body footer .work .contact-container .works .logo:nth-child(1) img,
-body footer .work .contact-container .works .logo:nth-child(4) img,
-body footer .webpage-age .skills-container .logos .logo:nth-child(1) img,
-body footer .webpage-age .skills-container .logos .logo:nth-child(4) img,
-body footer .webpage-age .skills-container .works .logo:nth-child(1) img,
-body footer .webpage-age .skills-container .works .logo:nth-child(4) img,
-body footer .webpage-age .work-container .logos .logo:nth-child(1) img,
-body footer .webpage-age .work-container .logos .logo:nth-child(4) img,
-body footer .webpage-age .work-container .works .logo:nth-child(1) img,
-body footer .webpage-age .work-container .works .logo:nth-child(4) img,
-body footer .webpage-age .webpage-age-container .logos .logo:nth-child(1) img,
-body footer .webpage-age .webpage-age-container .logos .logo:nth-child(4) img,
-body footer .webpage-age .webpage-age-container .works .logo:nth-child(1) img,
-body footer .webpage-age .webpage-age-container .works .logo:nth-child(4) img,
-body footer .webpage-age .contact-container .logos .logo:nth-child(1) img,
-body footer .webpage-age .contact-container .logos .logo:nth-child(4) img,
-body footer .webpage-age .contact-container .works .logo:nth-child(1) img,
-body footer .webpage-age .contact-container .works .logo:nth-child(4) img,
-body footer .contact .skills-container .logos .logo:nth-child(1) img,
-body footer .contact .skills-container .logos .logo:nth-child(4) img,
-body footer .contact .skills-container .works .logo:nth-child(1) img,
-body footer .contact .skills-container .works .logo:nth-child(4) img,
-body footer .contact .work-container .logos .logo:nth-child(1) img,
-body footer .contact .work-container .logos .logo:nth-child(4) img,
-body footer .contact .work-container .works .logo:nth-child(1) img,
-body footer .contact .work-container .works .logo:nth-child(4) img,
-body footer .contact .webpage-age-container .logos .logo:nth-child(1) img,
-body footer .contact .webpage-age-container .logos .logo:nth-child(4) img,
-body footer .contact .webpage-age-container .works .logo:nth-child(1) img,
-body footer .contact .webpage-age-container .works .logo:nth-child(4) img,
-body footer .contact .contact-container .logos .logo:nth-child(1) img,
-body footer .contact .contact-container .logos .logo:nth-child(4) img,
-body footer .contact .contact-container .works .logo:nth-child(1) img,
-body footer .contact .contact-container .works .logo:nth-child(4) img {
-  width: 107%;
-  height: 96%;
-}
-
-body main .skills .skills-container .logos .logo:nth-child(3) img, body main .skills .skills-container .works .logo:nth-child(3) img, body main .skills .work-container .logos .logo:nth-child(3) img, body main .skills .work-container .works .logo:nth-child(3) img, body main .skills .webpage-age-container .logos .logo:nth-child(3) img, body main .skills .webpage-age-container .works .logo:nth-child(3) img, body main .skills .contact-container .logos .logo:nth-child(3) img, body main .skills .contact-container .works .logo:nth-child(3) img,
-body main .work .skills-container .logos .logo:nth-child(3) img,
-body main .work .skills-container .works .logo:nth-child(3) img,
-body main .work .work-container .logos .logo:nth-child(3) img,
-body main .work .work-container .works .logo:nth-child(3) img,
-body main .work .webpage-age-container .logos .logo:nth-child(3) img,
-body main .work .webpage-age-container .works .logo:nth-child(3) img,
-body main .work .contact-container .logos .logo:nth-child(3) img,
-body main .work .contact-container .works .logo:nth-child(3) img,
-body main .webpage-age .skills-container .logos .logo:nth-child(3) img,
-body main .webpage-age .skills-container .works .logo:nth-child(3) img,
-body main .webpage-age .work-container .logos .logo:nth-child(3) img,
-body main .webpage-age .work-container .works .logo:nth-child(3) img,
-body main .webpage-age .webpage-age-container .logos .logo:nth-child(3) img,
-body main .webpage-age .webpage-age-container .works .logo:nth-child(3) img,
-body main .webpage-age .contact-container .logos .logo:nth-child(3) img,
-body main .webpage-age .contact-container .works .logo:nth-child(3) img,
-body main .contact .skills-container .logos .logo:nth-child(3) img,
-body main .contact .skills-container .works .logo:nth-child(3) img,
-body main .contact .work-container .logos .logo:nth-child(3) img,
-body main .contact .work-container .works .logo:nth-child(3) img,
-body main .contact .webpage-age-container .logos .logo:nth-child(3) img,
-body main .contact .webpage-age-container .works .logo:nth-child(3) img,
-body main .contact .contact-container .logos .logo:nth-child(3) img,
-body main .contact .contact-container .works .logo:nth-child(3) img, body footer .skills .skills-container .logos .logo:nth-child(3) img, body footer .skills .skills-container .works .logo:nth-child(3) img, body footer .skills .work-container .logos .logo:nth-child(3) img, body footer .skills .work-container .works .logo:nth-child(3) img, body footer .skills .webpage-age-container .logos .logo:nth-child(3) img, body footer .skills .webpage-age-container .works .logo:nth-child(3) img, body footer .skills .contact-container .logos .logo:nth-child(3) img, body footer .skills .contact-container .works .logo:nth-child(3) img,
-body footer .work .skills-container .logos .logo:nth-child(3) img,
-body footer .work .skills-container .works .logo:nth-child(3) img,
-body footer .work .work-container .logos .logo:nth-child(3) img,
-body footer .work .work-container .works .logo:nth-child(3) img,
-body footer .work .webpage-age-container .logos .logo:nth-child(3) img,
-body footer .work .webpage-age-container .works .logo:nth-child(3) img,
-body footer .work .contact-container .logos .logo:nth-child(3) img,
-body footer .work .contact-container .works .logo:nth-child(3) img,
-body footer .webpage-age .skills-container .logos .logo:nth-child(3) img,
-body footer .webpage-age .skills-container .works .logo:nth-child(3) img,
-body footer .webpage-age .work-container .logos .logo:nth-child(3) img,
-body footer .webpage-age .work-container .works .logo:nth-child(3) img,
-body footer .webpage-age .webpage-age-container .logos .logo:nth-child(3) img,
-body footer .webpage-age .webpage-age-container .works .logo:nth-child(3) img,
-body footer .webpage-age .contact-container .logos .logo:nth-child(3) img,
-body footer .webpage-age .contact-container .works .logo:nth-child(3) img,
-body footer .contact .skills-container .logos .logo:nth-child(3) img,
-body footer .contact .skills-container .works .logo:nth-child(3) img,
-body footer .contact .work-container .logos .logo:nth-child(3) img,
-body footer .contact .work-container .works .logo:nth-child(3) img,
-body footer .contact .webpage-age-container .logos .logo:nth-child(3) img,
-body footer .contact .webpage-age-container .works .logo:nth-child(3) img,
-body footer .contact .contact-container .logos .logo:nth-child(3) img,
-body footer .contact .contact-container .works .logo:nth-child(3) img {
-  width: 105%;
-  height: 100%;
-}
-
 body main .skills h2, body footer .skills h2 {
   margin-top: 2rem;
 }
 
 body main .work, body footer .work {
-  height: 80vh;
   background-image: -webkit-gradient(linear, right top, left bottom, from(#c8c8c8), color-stop(#acacac), color-stop(#909090), color-stop(#767676), to(#5c5c5c));
   background-image: linear-gradient(to left bottom, #c8c8c8, #acacac, #909090, #767676, #5c5c5c);
+  padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 75em) {
+  body main .work, body footer .work {
+    padding-bottom: 0;
+  }
 }
 
 body main .work .work-container, body footer .work .work-container {
   margin-top: 1rem;
+  margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 75em) {
+  body main .work .work-container, body footer .work .work-container {
+    margin-bottom: 0;
+  }
 }
 
 body main .work .work-container h2, body footer .work .work-container h2 {
@@ -1276,14 +1372,39 @@ body main .work .work-container .works, body footer .work .work-container .works
           column-gap: 3rem;
 }
 
+@media screen and (max-width: 75em) {
+  body main .work .work-container .works, body footer .work .work-container .works {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
 body main .work .work-container .works .work-photo, body footer .work .work-container .works .work-photo {
-  width: 95%;
-  height: 60%;
+  width: 18vw;
+  min-width: 300px;
+  height: 11vw;
+  min-height: 158px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 75em) {
+  body main .work .work-container .works .work-photo, body footer .work .work-container .works .work-photo {
+    width: auto;
+    height: auto;
+  }
 }
 
 body main .work .work-container .works .work-photo img, body footer .work .work-container .works .work-photo img {
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 75em) {
+  body main .work .work-container .works .work-photo img, body footer .work .work-container .works .work-photo img {
+    min-width: 300px;
+    width: 50vw;
+    min-height: 170px;
+    height: 35vw;
+  }
 }
 
 body main .work .work-container .works .work-photo img:hover, body footer .work .work-container .works .work-photo img:hover {
@@ -1322,7 +1443,7 @@ body main .work .work-container .works .work-photo i:hover, body footer .work .w
 body main .webpage-age, body footer .webpage-age {
   background-image: -webkit-gradient(linear, right bottom, left top, from(#0d0d0d), color-stop(#171717), color-stop(#1f1f1f), color-stop(#272727), to(#303030));
   background-image: linear-gradient(to left top, #0d0d0d, #171717, #1f1f1f, #272727, #303030);
-  height: 60vh;
+  min-height: 60vh;
 }
 
 body main .webpage-age .webpage-age-container, body footer .webpage-age .webpage-age-container {
@@ -1340,6 +1461,12 @@ body main .webpage-age .webpage-age-container, body footer .webpage-age .webpage
   height: auto;
 }
 
+@media screen and (max-width: 37.4em) {
+  body main .webpage-age .webpage-age-container, body footer .webpage-age .webpage-age-container {
+    margin-top: 3rem;
+  }
+}
+
 body main .webpage-age .webpage-age-container .underline, body footer .webpage-age .webpage-age-container .underline {
   margin: 1rem 0 0 0;
 }
@@ -1350,8 +1477,22 @@ body main .webpage-age .webpage-age-container .counter, body footer .webpage-age
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  height: 30vh;
   width: 60%;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 64em) {
+  body main .webpage-age .webpage-age-container .counter, body footer .webpage-age .webpage-age-container .counter {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 37.4em) {
+  body main .webpage-age .webpage-age-container .counter, body footer .webpage-age .webpage-age-container .counter {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 body main .webpage-age .webpage-age-container .counter .number, body footer .webpage-age .webpage-age-container .counter .number {
@@ -1377,26 +1518,22 @@ body main .webpage-age .webpage-age-container .counter .text, body footer .webpa
   width: 100%;
   text-align: center;
   font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 body footer .contact {
-  height: 47vh;
-}
-
-body footer .contact .contact-container .contact-data {
-  position: relative;
-  top: -40px;
+  min-height: 45vh;
 }
 
 body footer .contact .contact-container .contact-data span {
   font-family: Tahoma;
-  font-size: 2.8rem;
+  font-size: clamp(0.8rem, calc(0.8rem + 2vw), 2.8rem);
 }
 
 body footer .contact .contact-container .contact-data h2 {
-  margin: 1.5rem;
-  margin-top: 5.5rem;
-  font-size: 2.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.8rem, calc(0.8rem + 2vw), 2.8rem);
 }
 
 body footer .contact .contact-container .contact-data .links {
@@ -1407,7 +1544,7 @@ body footer .contact .contact-container .contact-data .links {
 
 body footer .contact .contact-container .contact-data .links a {
   margin: 0 3rem;
-  font-size: 3rem;
+  font-size: clamp(2rem, calc(0.8rem + 2vw), 3rem);
   color: #a5a5a5;
 }
 
@@ -1416,19 +1553,27 @@ body footer .contact .contact-container .contact-data .links a:hover {
           filter: brightness(300%);
 }
 
+@media screen and (max-width: 30em) {
+  body footer .contact .contact-container .contact-data .links a {
+    margin: 0 1rem;
+  }
+}
+
 body footer .contact .contact-container .contact-data .copyright {
   width: 100%;
   text-align: center;
-  margin-top: 3rem;
-  font-size: 1.3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  font-size: clamp(1rem, calc(0.5rem + 1vw), 1.3rem);
+  padding: 0 3rem;
 }
 
 body footer .contact .contact-container .contact-data .copyright .copyright-letter {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, calc(0.5rem + 1vw), 1.3rem);
 }
 
 body footer .contact .contact-container .contact-data .copyright #author {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, calc(0.5rem + 1vw), 1.3rem);
   font-family: "ailerons";
 }
 
@@ -1449,6 +1594,18 @@ body footer .contact .contact-container .contact-data .copyright a:hover {
   text-shadow: 0px 0px 30px #0ada9b;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media screen and (max-width: 30em) {
+  body footer .contact .contact-container .contact-data .copyright #autograph {
+    display: block;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+body footer .contact .contact-container .underline {
+  margin-bottom: 2rem;
 }
 
 select {
