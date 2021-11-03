@@ -114,14 +114,17 @@ let languages = {
 let languageSelector = document.querySelector("#language-selector");
 
 //Navbar
-let navHome = document.querySelector("#nav-home");
-let navAbout = document.querySelector("#nav-about");
-let navSkills = document.querySelector("#nav-skills");
-let navWork = document.querySelector("#nav-work");
-let navContact = document.querySelector("#nav-contact");
+let navHome = document.querySelectorAll(".nav-home");
+let navAbout = document.querySelectorAll(".nav-about");
+let navSkills = document.querySelectorAll(".nav-skills");
+let navWork = document.querySelectorAll(".nav-work");
+let navContact = document.querySelectorAll(".nav-contact");
 //Title
 let titleH1 = document.querySelector(".title-1");
 let titleBig = document.querySelector(".paragraph-welcome");
+let titleBigResponsive = document.querySelector(
+  ".paragraph-welcome-responsive"
+);
 //About
 let titleAbout = document.querySelector(".description h2");
 let textAbout = document.querySelector(".description p");
@@ -155,15 +158,26 @@ const chooseLanguage = () => {
   languageSelector.style.backgroundColor = "#e6dfdfc2";
 
   //Changing text from NAVBAR
-  navHome.innerHTML = LAN.navbar.home;
-  navAbout.innerHTML = LAN.navbar.about;
-  navSkills.innerHTML = LAN.navbar.skills;
-  navWork.innerHTML = LAN.navbar.works;
-  navContact.innerHTML = LAN.navbar.contact;
+  navHome.forEach((element) => {
+    element.innerHTML = LAN.navbar.home;
+  });
+  navAbout.forEach((element) => {
+    element.innerHTML = LAN.navbar.about;
+  });
+  navSkills.forEach((element) => {
+    element.innerHTML = LAN.navbar.skills;
+  });
+  navWork.forEach((element) => {
+    element.innerHTML = LAN.navbar.works;
+  });
+  navContact.forEach((element) => {
+    element.innerHTML = LAN.navbar.contact;
+  });
 
   //Changing texts from Home
   titleH1.innerHTML = LAN.home.titleH1;
   titleBig.innerHTML = LAN.home.titleBig;
+  titleBigResponsive.innerHTML = LAN.home.titleBig;
 
   //Changing texts from About
   titleAbout.innerHTML = LAN.about.title;
