@@ -28,8 +28,11 @@ const animations = () => {
 
   //Parallax Effect
   imgHome.style.transform = `translateY(${scroll * -0.5}px)`;
+  // imgSkills.style.backgroundPosition = `center top ${
+  //   ((scroll - skillsHeight - 900) / 3.5) * -0.8
+  // }px`;
   imgSkills.style.backgroundPosition = `center top ${
-    ((scroll - skillsHeight - 900) / 3.5) * -0.8
+    ((scroll - skillsHeight - 1200) / 3.5) * -0.8
   }px`;
 
   //Header scroll reveal
@@ -37,7 +40,7 @@ const animations = () => {
     imageAbout.style.animation = `scroll-reveal 1s ease-in forwards`;
     descriptionAbout.style.animation = `scroll-reveal 1s ease-in forwards`;
   }
-  //About scroll reveal
+  //Skills scroll reveal
   if (scroll > headerHeight + aboutHeight / 2) {
     skillsContainer.style.animation = `scroll-reveal 1s ease-in forwards`;
   }
@@ -73,6 +76,5 @@ underConstruction.addEventListener("click", () => {
 setTimeout(() => {
   window.addEventListener("resize", () => {
     paragraphWelcomeAnimation.style.animation = "none";
-    paragraphWelcomeResponsive.style.animation = "none";
   });
 }, 6000);

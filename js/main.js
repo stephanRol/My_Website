@@ -1,1 +1,0 @@
-import { myExport } from "./typeWriter";
