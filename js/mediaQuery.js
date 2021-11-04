@@ -24,8 +24,10 @@ const chooseLang = () => {
   }
   if (langSelector.value === "ES") {
     if (mediaquerySkills.matches) {
+      alert("4rem");
       titleSkillsSpanish.style.fontSize = "4rem";
     } else {
+      alert("3rem");
       titleSkillsSpanish.style.fontSize = "3rem";
     }
 

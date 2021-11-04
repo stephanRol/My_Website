@@ -73,16 +73,3 @@ setTimeout(function () {
 setTimeout(function () {
   alfa(".div-down");
 }, 0);
-
-// setTimeout(() => {
-//   let text = document.querySelector(".div-up");
-//   let text = document.querySelector(".title-1-open");
-//   let text = document.querySelector(".title-1");
-//   let text = document.querySelector(".title-1-close");
-//   let text = document.querySelector(".title-2-open");
-//   let text = document.querySelector(".title-2");
-//   let text = document.querySelector(".title-2-close");
-//   let text = document.querySelector(".div-down");
-
-//   text.style.color = "green";
-// }, 14000);

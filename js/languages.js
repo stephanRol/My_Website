@@ -14,7 +14,7 @@ let languages = {
     },
     about: {
       title: "About me",
-      text: "Lorem ipsum dolor sit, amet English adipisicing elit. Nisi nihil necessitatibus perspiciatis dolorem quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.Quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.",
+      text: "My name is Stephan and I am an electrical engineer graduated from the Universidad de la Frontera, in Temuco, Chile, with a brief work experience in Santiago de Chile. I am currently living in Germany and in the past I worked in the area of automation of industries, specifically automation in intralogistics based on the development of industry 4.0, in the position of PLC programmer.<br><br>In the year 2020 I decided to change the area and enter the wonderful world of computer programming, so I started a training of 'Fullstack developer' for a duration of 6 months, in the training center Alfatraining in Hamburg, Germany. At the end of the training I decided to go deeper into frontend development, learning various technologies. Currently I am proficient in HTML5, CSS, JavaScript, React, TypeScript, Sass, Bootstrap, Node.js and Git.<br><br>My university degree has been validated and recognized by the Baden-Wurtemberg Chamber of Engineers in Germany and I have a certified C1 level in German (High, according to European standards) from the Goethe Institut. Furthermore I have intermediate knowledge of English.",
     },
     skills: {
       title: "Skills",
@@ -50,7 +50,7 @@ let languages = {
     },
     about: {
       title: "Ueber Mich",
-      text: "Lorem ipsum dolor sit, amet Deutsch adipisicing elit. Nisi nihil necessitatibus perspiciatis dolorem quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.Quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.",
+      text: "Mein Name ist Stephan und ich bin Elektroingenieur und habe mein Studium an der Universidad de la Frontera in Temuco, Chile, abgeschlossen, mit einer kurzen Berufserfahrung in Santiago de Chile. Ich lebe derzeit in Deutschland und habe in der Vergangenheit im Bereich der industriellen Automatisierung, speziell in der Intralogistik-Automatisierung auf Basis der Entwicklung von Industrie 4.0, als SPS-Programmierer gearbeitet.<br><br>Im Jahr 2020 entschied ich mich, mein Fachgebiet zu wechseln und in die wunderbare Welt der Computerprogrammierung einzutauchen, also begann ich eine 6-monatige Ausbildung zum ‘Fullstack Developer’ im Alfatraining Schulungszentrum in Hamburg. Am Ende der Ausbildung beschloss ich, mich intensiver mit der Frontend-Entwicklung zu befassen und verschiedene Technologien zu erlernen. Derzeit beherrsche ich HTML5, CSS, JavaScript, React, TypeScript, Sass, Bootstrap, Node.js und Git.<br><br>Mein Hochschulabschluss wurde von der Ingenieurkammer Baden-Wuerttemberg in Deutschland validiert und anerkannt, und ich verfuege ueber ein vom Goethe-Institut bescheinigtes C1-Niveau in Deutsch. Außerdem verfuege ich ueber mittlere Englischkenntnisse.",
     },
     skills: {
       title: "Kenntnisse",
@@ -86,7 +86,9 @@ let languages = {
     },
     about: {
       title: "Sobre mí",
-      text: "Lorem ipsum dolor sit, amet Espanol adipisicing elit. Nisi nihil necessitatibus perspiciatis dolorem quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.Quaerat quod fugiat nostrum vero consectetur! Cupiditate quos consequatur iure itaque officia eius beatae autem magnam incidunt aliquid quisquam optio, corporis molestias, dolores, accusamus praesentium.",
+      text: `Mi nombre es Stephan y soy ingeniero eléctrico titulado de la Universidad de la Frontera, en Temuco, Chile, con breve paso laboral en Santiago de Chile. Actualmente me encuentro viviendo en Alemania y en el pasado trabajé en el área de Automatización de industrias, específicamente automatización en intralogistica en base al desarrollo de la industria 4.0, en el puesto de programador de PLC's. <br><br>
+      En el año 2020 tomé la decisión de cambiar de área y adentrarme al maravilloso mundo de la programación informática, por lo que comencé una capacitación de “desarrollador Fullstack” de una duración de 6 meses, en el centro de formación continua Alfatraining en Hamburg, Alemania. Al finalizar la capacitacion he decidido profundizar más en el desarrollo Frontend, aprendiendo variadas tecnologías. Actualmente tengo manejo de las tecnologías: HTML5, CSS, JavaScript, React, TypeScript, Sass, Bootstrap, Node.js y Git.
+      <br><br>Mi titulo universitario ha sido convalidado y reconocido por la camara de ingenieros de Baden-Würtemberg en Alemania y poseo un nivel C1 certificado en Alemán de el Goethe Institut. Además poseo conocimientos intermedios de ingles.`,
     },
     skills: {
       title: "Conocimientos",

@@ -12,6 +12,10 @@ const skillsContainer = document.querySelector(".skills-container");
 const underConstruction = document.querySelector(".under-construction");
 const imageAbout = document.querySelector(".image");
 const descriptionAbout = document.querySelector(".description");
+const paragraphWelcomeAnimation = document.querySelector(".paragraph-welcome");
+const paragraphWelcomeResponsive = document.querySelector(
+  ".paragraph-welcome-responsive"
+);
 
 const animations = () => {
   let scroll = window.pageYOffset;
@@ -65,3 +69,10 @@ window.addEventListener("scroll", animations);
 underConstruction.addEventListener("click", () => {
   alert("This project is under construction, there's no Website yet.");
 });
+
+setTimeout(() => {
+  window.addEventListener("resize", () => {
+    paragraphWelcomeAnimation.style.animation = "none";
+    paragraphWelcomeResponsive.style.animation = "none";
+  });
+}, 6000);
