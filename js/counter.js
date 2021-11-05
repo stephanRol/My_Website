@@ -7,7 +7,7 @@ let calculateTime = () => {
   let minutes = document.querySelector(".minutes");
   let seconds = document.querySelector(".seconds");
 
-  let dateStart = new Date(1988, 10, 22);
+  let dateStart = new Date(2021, 10, 4);
   let dateNow = new Date();
 
   let diff = dateNow.getTime() - dateStart.getTime();
