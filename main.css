@@ -1614,12 +1614,11 @@ body main .webpage-age .webpage-age-container .counter .number, body footer .web
       -ms-flex-align: center;
           align-items: center;
   font-size: 6rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#5c601f), color-stop(#626623), color-stop(#676c27), color-stop(#6d722b), color-stop(#73782f), color-stop(#7d823a), color-stop(#868b44), color-stop(#90954f), color-stop(#a0a563), color-stop(#b0b577), color-stop(#c0c58b), to(#d1d5a0));
-  background-image: linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
-  background-image: -moz-linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#5c601f), color-stop(#626623), color-stop(#676c27), color-stop(#6d722b), color-stop(#73782f), color-stop(#7d823a), color-stop(#868b44), color-stop(#90954f), color-stop(#a0a563), color-stop(#b0b577), color-stop(#c0c58b), to(#d1d5a0));
+  background: linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
+  background: -webkit-linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
   background-clip: text;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-filter: drop-shadow(5px 10px 10px black);
           filter: drop-shadow(5px 10px 10px black);

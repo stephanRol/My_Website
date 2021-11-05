@@ -578,12 +578,12 @@ body{
                         align-items: center;
                         font-size: 6rem;
 
-                        background-image: linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
-                        background-image: -webkit-linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
-                        background-image: -moz-linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
+                        // background-image: linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
+                        // background-image: -webkit-linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
+                        background: linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
+                        background: -webkit-linear-gradient(to bottom, #5c601f, #626623, #676c27, #6d722b, #73782f, #7d823a, #868b44, #90954f, #a0a563, #b0b577, #c0c58b, #d1d5a0);
                         background-clip: text;
                         -webkit-background-clip: text;
-                        -moz-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 1));
                     }
