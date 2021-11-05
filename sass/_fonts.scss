@@ -1,4 +1,4 @@
-$font-path: "../assets";
+$font-path: "./assets";
 
 //Deeperst Possible Browser Support
 
@@ -25,7 +25,7 @@ $font-path: "../assets";
 
 @font-face {
     font-family: "codesaver";
-    src: url("#{$font-path}/CodeSaver-Regular.otf") format('truetype');
+    src: url("#{$font-path}/CodeSaver-Regular.otf") format('opentype');
     font-weight: 700;
     font-style: normal;
 }
