@@ -148,6 +148,7 @@ body{
                     padding: 1rem;
                     clip-path: polygon(0 0, 95% 0, 75% 100%, 0 100%);
                     background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(8, 8, 8, 0.945));
+                    background-image: -moz-linear-gradient(to bottom, rgb(0, 0, 0), rgba(8, 8, 8, 0.945));
                     animation: polygonEffect 4.5s forwards;
                     @media screen and (max-width: 30em) {
                         padding: 5rem 1rem;
@@ -392,7 +393,7 @@ body{
             justify-content: center;
             align-items: center;
             width: 100vw;
-            background: linear-gradient(to left bottom, #060505ee, #090809ee, #0c0b0cee, #0e0e10ee, #101112f6, #141515ee, #181818f6, #1b1b1bf6, #212121f6, #262626f6, #2c2c2cf6, #323232f6), url("../assets/skills-bg.jpg");
+            background: linear-gradient(to left bottom, #060505ee, #090809ee, #0c0b0cee, #0e0e10ee, #101112f6, #141515ee, #181818f6, #1b1b1bf6, #212121f6, #262626f6, #2c2c2cf6, #323232f6), url("./assets/skills-bg.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -700,6 +701,8 @@ select{
     width: 130px;
     padding-top: 1.3rem;
     background: url("./assets/EN.png") no-repeat scroll 75px 2px;
+    font-family: "ailerons";
+    -moz-font-family: "ailerons";
 }
 
 @keyframes scroll-reveal{
