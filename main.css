@@ -1748,7 +1748,7 @@ body .menuHamburger ul li a {
 select {
   width: 130px;
   padding-top: 1.3rem;
-  background: url("../assets/EN.png") no-repeat scroll 75px 2px;
+  background: url("./assets/EN.png") no-repeat scroll 75px 2px;
 }
 
 @-webkit-keyframes scroll-reveal {

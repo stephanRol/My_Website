@@ -156,7 +156,7 @@ const chooseLanguage = () => {
   if (languageSelector.value === "ES") LAN = languages.ES;
 
   //Changing flag from Select
-  languageSelector.style.background = `url("../assets/${languageSelector.value}.png") no-repeat scroll 75px 2px`;
+  languageSelector.style.background = `url("./assets/${languageSelector.value}.png") no-repeat scroll 75px 2px`;
   languageSelector.style.backgroundColor = "#e6dfdfc2";
 
   //Changing text from NAVBAR
