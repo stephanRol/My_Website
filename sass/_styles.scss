@@ -394,6 +394,8 @@ body{
             align-items: center;
             width: 100vw;
             background: linear-gradient(to left bottom, #060505ee, #090809ee, #0c0b0cee, #0e0e10ee, #101112f6, #141515ee, #181818f6, #1b1b1bf6, #212121f6, #262626f6, #2c2c2cf6, #323232f6), url("./assets/skills-bg.jpg");
+            background: -webkit-linear-gradient(to left bottom, #060505ee, #090809ee, #0c0b0cee, #0e0e10ee, #101112f6, #141515ee, #181818f6, #1b1b1bf6, #212121f6, #262626f6, #2c2c2cf6, #323232f6), url("./assets/skills-bg.jpg");
+            background: -moz-linear-gradient(to left bottom, #060505ee, #090809ee, #0c0b0cee, #0e0e10ee, #101112f6, #141515ee, #181818f6, #1b1b1bf6, #212121f6, #262626f6, #2c2c2cf6, #323232f6), url("./assets/skills-bg.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;

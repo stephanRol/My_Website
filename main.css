@@ -665,6 +665,7 @@ body footer .contact {
   width: 100vw;
   background: -webkit-gradient(linear, right top, left bottom, from(#060505ee), color-stop(#090809ee), color-stop(#0c0b0cee), color-stop(#0e0e10ee), color-stop(#101112f6), color-stop(#141515ee), color-stop(#181818f6), color-stop(#1b1b1bf6), color-stop(#212121f6), color-stop(#262626f6), color-stop(#2c2c2cf6), to(#323232f6)), url("./assets/skills-bg.jpg");
   background: linear-gradient(to left bottom, #060505ee, #090809ee, #0c0b0cee, #0e0e10ee, #101112f6, #141515ee, #181818f6, #1b1b1bf6, #212121f6, #262626f6, #2c2c2cf6, #323232f6), url("./assets/skills-bg.jpg");
+  background: -moz-linear-gradient(to left bottom, #060505ee, #090809ee, #0c0b0cee, #0e0e10ee, #101112f6, #141515ee, #181818f6, #1b1b1bf6, #212121f6, #262626f6, #2c2c2cf6, #323232f6), url("./assets/skills-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
